@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         item.classList.toggle('open');
     };
 
-    // Обработчик клика по стрелочкам для открывания/закрывания карточек
     document.querySelectorAll('.arrow-toggle').forEach(arrow => {
         arrow.addEventListener('click', function() {
             const listItem = this.closest('.list-item');
@@ -113,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Обработчик клика по элементам списка
     listItems.forEach(item => {
         item.addEventListener('click', () => {
             const time = parseFloat(item.getAttribute('data-time'));
@@ -122,19 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Обновление прогресс-бара
     function updateProgressBar() {
         const progress = (video.currentTime / video.duration) * 100;
         
-        if (window.innerWidth > 768) {  // Для десктопа
+        if (window.innerWidth > 768) {  
             progressBar.style.width = '40%';
             progressBar.style.height = progress + '%';
-        } else {  // Для мобильных
+        } else {  
             progressBar.style.height = '40%';
             progressBar.style.width = progress + '%';
         }
 
-        // Обновление открытых элементов списка в зависимости от времени видео
         const currentTime = video.currentTime;
 
         if (currentTime >= timestamps[0] && currentTime < timestamps[1]) {
@@ -156,16 +152,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Обработчик события timeupdate для видео
     video.addEventListener('timeupdate', updateProgressBar);
 
-    // Функция для получения параметра из URL
     function getUrlParameter(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
     }
 
-    // Динамическое содержание (Goal)
     const goal = getUrlParameter('goal');
     const dynamicContent = document.getElementById('dynamic-content');
     if (goal) {
