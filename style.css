@@ -298,9 +298,8 @@ footer p {
     border-radius: 10px;
 }
 
-/* Foreground progress bar (синий) */
 .video-progress-bar {
-    width: 40%; /* Ширина 100% от родителя */
+    width: 40%; 
     height: 0%;
     background-color: #5773FF;
     border-radius: 10px;
@@ -389,19 +388,6 @@ footer p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------------ Mobile adaptation ---------------------------------------------- */
 @media (max-width: 768px) {
     .header {
@@ -478,12 +464,10 @@ footer p {
 
 /* ------------------------ Mobile adaptation ----------------------------------------------*/
 @media (max-width: 768px) {
-    /* Скрываем header */
     .header {
         display: none;
     }
 
-    /* Основной контейнер */
     .main-container {
         flex-direction: column;
         align-items: center;
@@ -491,7 +475,6 @@ footer p {
         margin: 0 auto;
     }
 
-    /* Уменьшение текста в секции */
     .text-container {
         width: 98%;
         padding: 10px;
@@ -511,7 +494,6 @@ footer p {
         text-align: left;
     }
 
-    /* Изображения: задаем ширину чуть меньше экрана */
     .image-container img {
         width: 91%;
         margin: 10px auto;
@@ -528,7 +510,6 @@ footer p {
         display: block;
     }
 
-    /* Footer */
     footer {
         width: 100%;
         padding: 20px 0;
@@ -542,20 +523,18 @@ footer p {
         width: 100%;
     }
 
-    /* Скрываем .bar-frame для мобильных устройств */
     .bar-frame {
-        display: none !important; /* Скрываем bar-frame */
+        display: none !important; 
     }
 
     .bar-frame-left,
     .bar-frame-right {
-        display: inline-block; /* Показываем bar-frame-left и bar-frame-right для мобильных */
+        display: inline-block;
         width: 48%;
     }
 
-    /* Изменение размера border-left в зависимости от высоты списка */
     .list-container {
-        height: auto; /* Меняем высоту в зависимости от содержимого */
+        height: auto;
         border-left: 4px solid #5773FF;
     }
 
@@ -569,21 +548,20 @@ footer p {
 
 @media (min-width: 769px) {
     .bar-frame{
-        display: block; /* Показываем bar-frame для десктопа */
+        display: block;
     }
 
     .bar-frame-left,
     .bar-frame-right {
-        display: none !important; /* Скрываем bar-frame-left и bar-frame-right для десктопа */
+        display: none !important; 
     }
 }
 
 /* ------------------------ Mobile adaptation for video and list ------------------------ */
 @media (max-width: 768px) {
-    /* Mobile video adaptation */
     .second-section {
         width: 90%;
-        padding: 20px 10px; /* Уменьшили отступы */
+        padding: 20px 10px;
         background-color: #E6E6E6;
         display: flex;
         flex-direction: column;
@@ -592,7 +570,7 @@ footer p {
 
     .content-container {
         display: flex;
-        flex-direction: column; /* Сделано колонкой для мобильных */
+        flex-direction: column; 
         gap: 20px;
         width: 100%;
     }
@@ -605,7 +583,7 @@ footer p {
     }
 
     .video {
-        width: 100%; /* Видео растягиваем на весь экран */
+        width: 100%; 
     }
 
     .video video {
@@ -614,10 +592,10 @@ footer p {
     }
 
     .video-progress {
-        width: 100%; /* Ширина контейнера на всю ширину экрана */
-        height: 16px; /* Высота полосы */
-        background-color: #ddd; /* Светлый фон для прогресса */
-        border-radius: 5px; /* Скругление углов */
+        width: 100%; 
+        height: 16px; 
+        background-color: #ddd; 
+        border-radius: 5px; 
         position: relative;
         overflow: hidden;
     }
@@ -631,11 +609,11 @@ footer p {
     }
 
     .scroll-list-container {
-        max-height: 300px; /* Уменьшаем максимальную высоту для мобильных */
+        max-height: 300px; 
     }
 
     .scroll-list {
-        width: 100%; /* Устанавливаем на всю ширину */
+        width: 100%;
         margin-left: 0;
     }
 
@@ -644,20 +622,19 @@ footer p {
     }
 
     .arrow-text-container {
-        font-size: 1.2em; /* Уменьшаем размер текста для мобильных */
+        font-size: 1.2em; 
     }
 
     .list-item p {
-        font-size: 1.3em; /* Уменьшаем шрифт */
+        font-size: 1.3em;
     }
 
     .extra-content {
-        font-size: 1em; /* Уменьшаем размер шрифта дополнительного контента */
+        font-size: 1em; 
     }
 }
 
 
-/* Общий стиль для ссылок */
 a {
     color: inherit;
     text-decoration: none;
